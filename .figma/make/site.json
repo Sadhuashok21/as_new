@@ -1,0 +1,10 @@
+{
+  "description": "Provides professional business solutions tailored to enhance operational efficiency and drive growth for companies seeking expert support.",
+  "robots": {
+    "index": false
+  },
+  "accessibility": {
+    "addBypassLinks": false,
+    "ignoreReducedMotion": false
+  }
+}
