@@ -1,0 +1,11 @@
+# https://www.robotstxt.org/robotstxt.html
+User-agent: *
+Allow: /
+Disallow: /admin
+Disallow: /admin/
+Disallow: /auth/
+Disallow: /upload
+Disallow: /search?*
+
+# Sitemaps
+Sitemap: https://www.ascentracoresolutions.com/sitemap.xml
