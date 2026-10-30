@@ -1,0 +1,205 @@
+.explore_blueprints_section {
+  margin-top: 2.5rem;
+  margin-bottom: 2rem;
+  padding: 1.75rem 1.5rem;
+  border-radius: 0.85rem;
+  background: color-mix(in oklab, var(--purple-950, #3c0366) 30%, transparent);
+  border: 1px solid var(--purple-900, rgba(90, 22, 141, 0.4));
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.25);
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.explore_blueprints_header {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 1rem;
+  margin-bottom: 1.5rem;
+  padding-bottom: 1rem;
+  border-bottom: 1px solid rgba(194, 122, 255, 0.15);
+}
+
+.explore_blueprints_title_group h3 {
+  font-size: 1.35rem;
+  font-weight: 700;
+  color: #ffffff;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin: 0 0 0.35rem 0;
+}
+
+.explore_blueprints_title_group h3 svg {
+  color: var(--cyan-400, #00d3f3);
+}
+
+.explore_blueprints_title_group p {
+  color: var(--gray-400, #99a1af);
+  font-size: 0.88rem;
+  margin: 0;
+}
+
+.explore_view_all_link {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  color: var(--cyan-400, #00d3f3);
+  font-size: 0.9rem;
+  font-weight: 600;
+  text-decoration: none;
+  padding: 6px 14px;
+  border-radius: 6px;
+  background: rgba(0, 211, 243, 0.1);
+  border: 1px solid rgba(0, 211, 243, 0.25);
+  transition: all 0.2s ease;
+}
+
+.explore_view_all_link:hover {
+  background: rgba(0, 211, 243, 0.2);
+  border-color: var(--cyan-400, #00d3f3);
+  transform: translateX(2px);
+}
+
+.explore_grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+  gap: 1.25rem;
+}
+
+.explore_card {
+  background: color-mix(in oklab, var(--purple-950, #3c0366) 65%, #0f071b);
+  border: 1px solid rgba(194, 122, 255, 0.2);
+  border-radius: 0.75rem;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  transition: transform 0.25s ease, border-color 0.25s ease, box-shadow 0.25s ease;
+  cursor: pointer;
+  text-decoration: none;
+}
+
+.explore_card:hover {
+  transform: translateY(-4px);
+  border-color: var(--cyan-400, #00d3f3);
+  box-shadow: 0 8px 24px rgba(0, 211, 243, 0.2);
+}
+
+.explore_card_thumb_wrap {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 16 / 10;
+  overflow: hidden;
+  background: #0b0514;
+}
+
+.explore_card_img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.35s ease;
+  display: block;
+}
+
+.explore_card:hover .explore_card_img {
+  transform: scale(1.05);
+}
+
+.explore_card_badge {
+  position: absolute;
+  top: 8px;
+  left: 8px;
+  background: rgba(15, 7, 27, 0.8);
+  backdrop-filter: blur(4px);
+  color: var(--purple-300, #e9d5ff);
+  font-size: 0.72rem;
+  font-weight: 600;
+  padding: 3px 8px;
+  border-radius: 6px;
+  border: 1px solid rgba(194, 122, 255, 0.3);
+  text-transform: capitalize;
+}
+
+.explore_card_body {
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+}
+
+.explore_card_title {
+  color: #ffffff;
+  font-size: 1rem;
+  font-weight: 700;
+  margin: 0 0 0.35rem 0;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  line-height: 1.3;
+}
+
+.explore_card_meta {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-size: 0.8rem;
+  color: var(--gray-400, #99a1af);
+  margin-bottom: 0.85rem;
+}
+
+.explore_card_author {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  max-width: 60%;
+}
+
+.explore_card_downloads {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  color: var(--cyan-400, #00d3f3);
+  font-weight: 600;
+}
+
+.explore_card_btn {
+  margin-top: auto;
+  width: 100%;
+  background: linear-gradient(90deg, rgba(0, 211, 243, 0.15) 0%, rgba(194, 122, 255, 0.15) 100%);
+  border: 1px solid rgba(0, 211, 243, 0.4);
+  color: #ffffff;
+  font-size: 0.82rem;
+  font-weight: 600;
+  padding: 7px 12px;
+  border-radius: 6px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.explore_card:hover .explore_card_btn {
+  background: linear-gradient(90deg, var(--cyan-400, #00d3f3) 0%, #0099cc 100%);
+  border-color: transparent;
+  color: #ffffff;
+}
+
+@media (max-width: 640px) {
+  .explore_blueprints_section {
+    padding: 1.25rem 1rem;
+  }
+  .explore_grid {
+    grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
+    gap: 0.85rem;
+  }
+  .explore_card_body {
+    padding: 0.75rem;
+  }
+  .explore_card_title {
+    font-size: 0.92rem;
+  }
+}
+

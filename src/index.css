@@ -1,5 +1,6 @@
-@import url('https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@600;700;800&family=Inter:wght@300;400;500;600;700&display=swap');
 @import 'tailwindcss';
+
+@custom-variant dark (&:where(.dark, .dark *));
 
 @theme {
   --font-display: 'Barlow Condensed', sans-serif;
@@ -7,12 +8,24 @@
   --color-navy: #0F172A;
   --color-blue: #2563EB;
   --color-blue-light: #EFF6FF;
+  --color-blue-600: #2563EB;
   --color-green: #16A34A;
+  --color-green-600: #16A34A;
 }
 
 * {
   scrollbar-width: thin;
-  scrollbar-color: #2563EB transparent;
+  scrollbar-color: #475569 transparent;
+  box-sizing: border-box;
+}
+
+html, body {
+  background-color: #06020c;
+  color: #f8fafc;
+  margin: 0;
+  padding: 0;
+  min-height: 100%;
+  overflow-x: hidden;
 }
 
 html {
@@ -37,6 +50,6 @@ html {
   background: transparent;
 }
 ::-webkit-scrollbar-thumb {
-  background: #2563EB;
+  background: #334155;
   border-radius: 2px;
 }
